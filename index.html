@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Тайский ретрит випассана — сообщество для CEO и фрилансеров</title>
-    <!-- Google Fonts для утончённой типографики -->
+    <title>Тайский ретрит випассана — CEO 50 Business Club</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 (бесплатные иконки) -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -16,23 +16,24 @@
         }
 
         body {
-            background-color: #faf7f0;
+            background-color: #f8f4ec;
             font-family: 'Inter', sans-serif;
             color: #2c2a24;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
 
-        /* буддийская цветовая гамма: терракотовые акценты, охра, песочный, глубокий коричневый */
+        /* Спокойная буддийская палитра — никаких излишних графических логотипов, только фоновые тона */
         :root {
-            --sand: #f2ebdf;
+            --sand-light: #f5efe6;
             --terracotta: #b85c38;
             --deep-ochre: #c29a6b;
             --dark-earth: #4a3b2c;
             --stone: #7e6b5a;
-            --saffron: #e6b17e;
+            --saffron: #e2b181;
+            --cream: #fffaf3;
             --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-            --shadow-md: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 20px 30px -12px rgba(0, 0, 0, 0.08);
         }
 
         .container {
@@ -41,30 +42,27 @@
             padding: 0 24px;
         }
 
-        /* Символизм Будды / мандала / лотос */
-        .bg-pattern {
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e6d5b8" opacity="0.2"><path d="M12 2L15 8.5L22 9.5L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9.5L9 8.5L12 2Z"/></svg>');
-            background-repeat: repeat;
-            background-size: 48px;
+        /* Простой фоновый слой — только цвет, никакого логотипа или узоров */
+        body {
+            background-color: var(--sand-light);
         }
 
-        /* header hero */
+        /* hero секция с мягким градиентом */
         .hero {
-            background: linear-gradient(135deg, #3e2c23 0%, #2b221b 100%);
+            background: linear-gradient(125deg, #3e2c23 0%, #2b221b 100%);
             color: #fef3e4;
             position: relative;
-            overflow: hidden;
             padding: 5rem 0 6rem;
         }
 
         .hero::before {
-            content: "☸";
-            font-size: 280px;
-            opacity: 0.05;
+            content: "";
             position: absolute;
-            bottom: -40px;
-            right: -30px;
-            font-family: serif;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(184, 92, 56, 0.08) 0%, rgba(0,0,0,0) 70%);
             pointer-events: none;
         }
 
@@ -75,10 +73,10 @@
 
         .badge {
             display: inline-block;
-            background: rgba(230, 177, 126, 0.2);
+            background: rgba(230, 177, 126, 0.18);
             backdrop-filter: blur(4px);
             border-radius: 60px;
-            padding: 0.4rem 1rem;
+            padding: 0.4rem 1.2rem;
             font-size: 0.75rem;
             letter-spacing: 1px;
             font-weight: 500;
@@ -102,7 +100,7 @@
         .hero-lead {
             font-size: 1.25rem;
             color: #e7dac8;
-            max-width: 580px;
+            max-width: 620px;
             margin: 1rem 0 2rem;
         }
 
@@ -150,7 +148,6 @@
             color: #fff;
         }
 
-        /* секции */
         section {
             padding: 5rem 0;
         }
@@ -160,7 +157,7 @@
         }
 
         .section-sand {
-            background-color: var(--sand);
+            background-color: var(--sand-light);
         }
 
         .section-title {
@@ -237,7 +234,6 @@
             flex-shrink: 0;
         }
 
-        /* правила (сила) */
         .rules-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -253,7 +249,6 @@
             font-weight: 500;
         }
 
-        /* инфо-блоки */
         .info-list {
             list-style: none;
         }
@@ -309,6 +304,18 @@
             border-color: #25D36650;
             color: #2c2a24;
         }
+        .club-badge {
+            background: #d8c9b5;
+            color: #3a2a1f;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
         @media (max-width: 640px) {
             .hero { padding: 3rem 0; }
             h1 { font-size: 2.8rem; }
@@ -318,12 +325,15 @@
 </head>
 <body>
 
-<!-- Герой-секция: приглашение в сообщество -->
+<!-- Герой-секция: приглашение для CEO 50 Business Club -->
 <section class="hero">
     <div class="container hero-content">
-        <span class="badge"><i class="fas fa-leaf" style="margin-right: 6px;"></i> Випассана · Тайская традиция</span>
+        <span class="badge">
+            <i class="fas fa-leaf" style="margin-right: 6px;"></i> Випассана · Тайская традиция 
+            <span class="club-badge"><i class="fas fa-crown"></i> CEO 50 Business Club</span>
+        </span>
         <h1>Отключитесь от потока.<br>Восстановите фокус.</h1>
-        <p class="hero-lead">Тайский ретрит випассана для CEO, предпринимателей и 50 фрилансеров. 6 дней глубокой ментальной тишины и ясности.</p>
+        <p class="hero-lead">Эксклюзивный ретрит випассана для участников <strong>CEO 50 Business Club</strong> и приглашённых предпринимателей. 6 дней ментальной тишины, ясности и глубокой трансформации.</p>
         <div class="btn-group">
             <a href="#form" class="btn btn-primary"><i class="fas fa-praying-hands"></i> Записаться на ретрит</a>
             <a href="#about" class="btn btn-outline"><i class="fas fa-feather-alt"></i> Узнать подробнее</a>
@@ -332,46 +342,46 @@
     </div>
 </section>
 
-<!-- О ретрите / что получите -->
+<!-- О ретрите / что получите + упоминание клуба -->
 <section id="about" class="section-light">
     <div class="container">
         <div class="grid-2">
             <div>
-                <span class="badge" style="background: #e6d5b830; color:#5a3f2e;">Для лидеров и творцов</span>
-                <h2 class="section-title">Очистите ум от информационного шума</h2>
-                <p style="font-size: 1.1rem; margin: 1.5rem 0 1rem;">Вы управляете проектами, людьми или собственным бизнесом. Ваш главный инструмент — ум — перегружен решениями и дедлайнами. Ретрит випассаны — это древняя система психологической саморегуляции, которую веками использовали для восстановления ясности.</p>
+                <span class="badge" style="background: #e6d5b830; color:#5a3f2e;">Для лидеров и предпринимателей</span>
+                <h2 class="section-title">Медитация как высший пилотаж</h2>
+                <p style="font-size: 1.1rem; margin: 1.5rem 0 1rem;">CEO 50 Business Club объединяет лидеров, которые стремятся к росту во всех сферах. Этот ретрит — практика випассаны, очищающая ум от информационного шума, возвращающая способность принимать решения из состояния покоя и внутренней опоры.</p>
                 <ul class="info-list">
-                    <li><i class="fas fa-brain"></i> <strong>Ясность мышления</strong> — научитесь отключать внутренний диалог, видеть суть без искажений.</li>
-                    <li><i class="fas fa-dharmachakra"></i> <strong>Устойчивость к стрессу</strong> — инструмент для мгновенного восстановления в любой ситуации.</li>
-                    <li><i class="fas fa-fire"></i> <strong>Энергия и фокус</strong> — перестанете сливать ресурс на тревогу и ментальный «мусор».</li>
-                    <li><i class="fas fa-moon"></i> <strong>Глубокое восстановление</strong> — 6 дней полного диджитал-детокса вернут больше, чем месяц отдыха.</li>
+                    <li><i class="fas fa-brain"></i> <strong>Ясность мышления</strong> — ум становится острым и незамутнённым.</li>
+                    <li><i class="fas fa-dharmachakra"></i> <strong>Антистресс-система</strong> — навык мгновенного восстановления в любой среде.</li>
+                    <li><i class="fas fa-fire"></i> <strong>Тотальный фокус</strong> — устраняем рассеивание внимания.</li>
+                    <li><i class="fas fa-moon"></i> <strong>Диджитал-детокс</strong> — 6 дней без телефонов и уведомлений.</li>
                 </ul>
             </div>
             <div>
                 <div class="card-feature" style="background: #faf2e6;">
                     <i class="fas fa-users"></i>
-                    <h3 style="font-size: 1.6rem; margin: 0.5rem 0;">Сообщество 50 лидеров</h3>
-                    <p>CEO, основатели, фрилансеры высшего уровня — вместе мы создаём поддерживающее поле тишины и практики. Без соревнования, только глубокая внутренняя работа.</p>
+                    <h3 style="font-size: 1.6rem; margin: 0.5rem 0;">CEO 50 Business Club Retreat</h3>
+                    <p>Закрытое сообщество предпринимателей, топ-менеджеров и владельцев бизнеса. Мы создаём пространство для глубокой внутренней работы без соревновательности. Количество мест: 30–40 участников клуба и их гостей.</p>
                     <hr>
                     <i class="fas fa-chalkboard-user"></i>
                     <h3 style="font-size: 1.2rem; margin-top: 0.5rem;">Учитель — Аджан Чатри</h3>
-                    <p>Монах тайской традиции, психолог, представитель Тайской Сангхи в России. Более 20 лет обучает современников адаптированной випассане.</p>
+                    <p>Монах тайской традиции, психолог, представитель Тайской Сангхи в России. Более 20 лет обучает практикам осознанности, адаптируя их к ритму современного лидера.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Ключевые принципы и расписание -->
+<!-- Расписание и правила -->
 <section class="section-sand">
     <div class="container">
         <div style="text-align: center; margin-bottom: 2rem;">
-            <h2 class="section-title title-center">Дух ретрита</h2>
-            <p style="max-width: 620px; margin: 1.5rem auto 0;">Полное молчание, отказ от гаджетов, медитации сидя и при ходьбе. Простые условия для настоящего погружения.</p>
+            <h2 class="section-title title-center">Дух ретрита — полное присутствие</h2>
+            <p style="max-width: 620px; margin: 1.5rem auto 0;">Молчание, отказ от гаджетов, медитации сидя и при ходьбе. Простые условия для максимальной глубины.</p>
         </div>
         <div class="grid-2">
             <div>
-                <h3><i class="fas fa-clock"></i> Расписание дня (пример)</h3>
+                <h3><i class="fas fa-clock"></i> Пример расписания дня</h3>
                 <ul class="info-list" style="margin-top: 1rem;">
                     <li><i class="fas fa-sun"></i> 05:30 — Пробуждение, декламация строф</li>
                     <li><i class="fas fa-meditate"></i> 06:00–07:30 — Медитация сидя / ходьба</li>
@@ -381,27 +391,27 @@
                     <li><i class="fas fa-heart"></i> 18:00 — Медитация метта (любящей доброты)</li>
                     <li><i class="fas fa-spa"></i> 20:30 — Завершение, отдых</li>
                 </ul>
-                <p class="text-small" style="margin-top: 1rem;"><i class="fas fa-leaf"></i> Питание 1 раз в день (вегетарианское). При беременности, диабете, гастрите режим питания гибкий.</p>
+                <p class="text-small" style="margin-top: 1rem;"><i class="fas fa-leaf"></i> Питание 1 раз в день (вегетарианское). Для беременных, диабетиков или при гастрите — гибкий режим.</p>
             </div>
             <div>
-                <h3><i class="fas fa-hand-sparkles"></i> Правила сообщества</h3>
+                <h3><i class="fas fa-hand-sparkles"></i> Правила сообщества на ретрите</h3>
                 <div class="rules-grid">
-                    <div class="rule-item"><i class="fas fa-comment-slash"></i> Полное молчание (никакого общения)</div>
-                    <div class="rule-item"><i class="fas fa-mobile-alt"></i> Отказ от телефонов и интернета</div>
-                    <div class="rule-item"><i class="fas fa-skull-crossbones"></i> Без алкоголя, курения, одурманивающих</div>
+                    <div class="rule-item"><i class="fas fa-comment-slash"></i> Полное благородное молчание</div>
+                    <div class="rule-item"><i class="fas fa-mobile-alt"></i> Сдача телефонов и часов</div>
+                    <div class="rule-item"><i class="fas fa-skull-crossbones"></i> Без алкоголя, никотина, стимуляторов</div>
                     <div class="rule-item"><i class="fas fa-user-check"></i> Нарушители покидают ретрит</div>
                 </div>
                 <div class="donation-box" style="margin-top: 2rem;">
                     <i class="fas fa-hand-holding-heart" style="font-size: 2rem; color: #b85c38;"></i>
-                    <h4 style="margin: 0.5rem 0">Философия даны (пожертвования)</h4>
-                    <p>Буддавихара существует только на подношения. Рекомендованное пожертвование на коммунальные расходы — от 1000₽ (можно на месте). Для студентов — дар не обязателен. Ваше пожертвование поддерживает «Дом Будды».</p>
+                    <h4 style="margin: 0.5rem 0">Дана — подношение из сердца</h4>
+                    <p>Буддавихара существует только на добровольные пожертвования. Рекомендованная поддержка на коммунальные расходы — от 1000₽ (можно на месте). Для студентов дана не обязательна. Ваша щедрость сохраняет «Дом Будды».</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Учитель и традиция -->
+<!-- Учитель -->
 <section class="section-light">
     <div class="container">
         <div class="teacher-card">
@@ -410,43 +420,43 @@
             </div>
             <div>
                 <h2 style="font-family: 'Cormorant Garamond'; font-size: 2rem;">Аджан Чатри</h2>
-                <p style="font-style: italic; color: #6b4c3b;">Монах тайской традиции Тхеравада, дипломат, официальный представитель Тайской Сангхи в России</p>
-                <p>«Буддавихара — это не про веру. Это про универсальные знания и освобождение ума. Каждый человек имеет право развивать себя, освобождаться от привязанностей и жить осознанно». Аджан Чатри соединяет древнюю мудрость с современной психологией, помогая практикующим достичь внутреннего покоя.</p>
-                <p><i class="fas fa-university"></i> Образование: Королевский буддийский университет, дипломатия и миротворчество (Англия, Австралия). Опыт проведения ретритов — более 25 лет.</p>
+                <p style="font-style: italic; color: #6b4c3b;">Монах тайской традиции Тхеравада, дипломат, представитель Тайской Сангхи в России</p>
+                <p>«Буддизм — это не религия в догматическом смысле, а система психологической саморегуляции. Випассана помогает лидерам обрести спокойствие ума и видеть вещи такими, какие они есть». Аджан Чатри объединяет мудрость древности с современной психологией, обучая более 20 лет практикующих по всему миру.</p>
+                <p><i class="fas fa-university"></i> Образование: Королевский буддийский университет, дипломатия и миротворчество (Англия, Австралия).</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Где, условия, вещи -->
+<!-- Проживание, вещи, локация -->
 <section class="section-sand">
     <div class="container">
         <div class="grid-2">
             <div>
-                <h2 class="section-title">Условия проживания</h2>
+                <h2 class="section-title">Аскетичный комфорт</h2>
                 <ul class="info-list" style="margin-top: 1.5rem;">
-                    <li><i class="fas fa-bed"></i> <strong>Общие комнаты</strong> (мужская/женская) — матрасы на полу.</li>
-                    <li><i class="fas fa-thermometer-half"></i> Простота и аскетичность — часть практики.</li>
-                    <li><i class="fas fa-tshirt"></i> <strong>Одежда:</strong> светлых тонов (серый, белый, бежевый, коричневый), свободный крой, плечи и колени закрыты.</li>
-                    <li><i class="fas fa-carrot"></i> <strong>Питание:</strong> вегетарианское, можно привозить продукты для общего стола по списку (рис, овощи, фрукты).</li>
+                    <li><i class="fas fa-bed"></i> <strong>Общие комнаты</strong> (раздельные для мужчин и женщин) — матрасы на полу.</li>
+                    <li><i class="fas fa-thermometer-half"></i> Простота, близость к природе — важная часть практики.</li>
+                    <li><i class="fas fa-tshirt"></i> <strong>Дресс-код:</strong> светлые тона (белый, серый, бежевый, коричневый), свободный крой, закрытые плечи и колени.</li>
+                    <li><i class="fas fa-carrot"></i> <strong>Питание:</strong> вегетарианское, приветствуются продукты для общего стола (рис, овощи, фрукты).</li>
                 </ul>
                 <div style="background: white; border-radius: 24px; padding: 1.5rem; margin-top: 1.5rem;">
-                    <i class="fas fa-suitcase"></i> <strong>Что взять с собой</strong>
+                    <i class="fas fa-suitcase"></i> <strong>Что необходимо взять</strong>
                     <ul style="margin-top: 0.8rem; list-style: none;">
                         <li>✓ Спальный мешок или одеяло</li>
-                        <li>✓ Удобная немаркая одежда</li>
-                        <li>✓ Полотенце, гигиена, кружка</li>
-                        <li>✓ Продукты по списку (будет выслан после регистрации)</li>
+                        <li>✓ Удобная немаркая одежда (2–3 комплекта)</li>
+                        <li>✓ Полотенце, гигиенические принадлежности, кружка</li>
+                        <li>✓ Продукты для общего стола (список пришлём после регистрации)</li>
                     </ul>
                 </div>
             </div>
             <div>
-                <h2 class="section-title">Локация и энергия места</h2>
-                <p>Загородный буддийский центр «Буддавихара» в экологичном районе Горелово (Санкт-Петербург). Адрес и схема проезда высылаются после одобрения заявки. Участники заселяются в общие комнаты — атмосфера простоты и уединения идеальна для отключения от городской суеты.</p>
+                <h2 class="section-title">Лесная обитель</h2>
+                <p>Загородный буддийский центр «Буддавихара» расположен в экологичной зоне Горелово (Ленинградская область). Тишина, сосны, атмосфера уединения — идеальное место для глубокого погружения в себя. Адрес и точная схема проезда высылаются после подтверждения заявки.</p>
                 <div class="donation-box" style="margin-top: 1rem;">
                     <i class="fas fa-ticket-alt"></i>
-                    <h4>Как попасть на ретрит</h4>
-                    <p>Заполните форму, дождитесь подтверждения. Можно приехать волонтёром, если хотите познакомиться с практикой без полного погружения. Напишите Марине в Telegram.</p>
+                    <h4>Как присоединиться к ретриту CEO 50?</h4>
+                    <p>Заполните форму ниже или свяжитесь с куратором клуба. Количество мест ограничено. Также возможен формат волонтёрства — мягкое знакомство с практикой без полного 6-дневного погружения.</p>
                     <a href="#form" class="btn btn-primary" style="margin-top: 1rem; background: #7e5a41; border: none; color: white;">Заполнить заявку →</a>
                 </div>
             </div>
@@ -454,57 +464,57 @@
     </div>
 </section>
 
-<!-- Пожертвования и реквизиты -->
+<!-- Поддержать центр (пожертвования) -->
 <section class="section-light">
     <div class="container">
         <div style="text-align: center; max-width: 800px; margin: 0 auto;">
             <i class="fas fa-dove" style="font-size: 2.5rem; color: #b85c38;"></i>
-            <h2 class="section-title title-center" style="margin-top: 1rem;">Поддержите «Обитель Будды»</h2>
-            <p>Буддавихара существует на ваши дары. Ваше подношение помогает проводить ретриты и содержать центр. Даже небольшое пожертвование — это огромный вклад в сохранение Дхаммы.</p>
+            <h2 class="section-title title-center" style="margin-top: 1rem;">Поддержите «Буддавихару»</h2>
+            <p>Дом Будды существует исключительно на ваши дары. Даже небольшое подношение помогает оплачивать коммунальные услуги, газ, отопление и проводить ретриты для всех желающих. Пусть ваша щедрость станет частью Дхаммы.</p>
             <div class="donation-box" style="margin: 2rem 0; text-align: left;">
-                <h4><i class="fas fa-hand-holding-usd"></i> Реквизиты для подношения (скриншот чека сохранить):</h4>
+                <h4><i class="fas fa-hand-holding-usd"></i> Реквизиты для пожертвования (пожалуйста, сохраните скриншот):</h4>
                 <ul class="info-list" style="margin-top: 1rem;">
                     <li><i class="fab fa-sberbank"></i> <strong>Сбербанк (МИР):</strong> 2202 2050 3816 6614 (Пхра Чатри Х.)</li>
                     <li><i class="fab fa-cc-visa"></i> <strong>Тинькофф:</strong> 4377 7237 4428 9186</li>
                     <li><i class="fas fa-phone-alt"></i> <strong>По номеру телефона:</strong> +7-911-117-15-15</li>
                 </ul>
-                <p class="text-small" style="margin-top: 1rem;">Рекомендованное минимальное пожертвование — 1000₽. Переведите заранее как знак серьёзных намерений. Студенты освобождаются.</p>
+                <p class="text-small" style="margin-top: 1rem;">Рекомендованное минимальное пожертвование для покрытия расходов — 1000₽. Для студентов — дана не обязательна. Заранее переведённая сумма — знак серьёзного намерения участвовать в ретрите.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Регистрация и контакты (форма) -->
+<!-- Регистрация и контакты -->
 <section id="form" class="section-sand">
     <div class="container">
         <div class="grid-2" style="align-items: start;">
             <div>
-                <h2 class="section-title">Станьте частью сообщества</h2>
-                <p>Оставьте заявку — количество мест ограничено (50 участников). После заполнения формы организаторы свяжутся с вами и вышлют анкету, схему проезда и список необходимых вещей.</p>
+                <h2 class="section-title">Заявка на участие</h2>
+                <p>Станьте частью эксклюзивного ретрита CEO 50 Business Club. После отправки формы с вами свяжутся организаторы, вышлют анкету, подтвердят место и подробную информацию о сборах.</p>
                 <div style="margin-top: 2rem;">
                     <p><i class="fas fa-envelope"></i> Или свяжитесь напрямую:</p>
                     <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp / Telegram:</strong> <a href="https://wa.me/79214288921" class="phone-link">+7-921-428-89-21 (Марина)</a> или <a href="https://wa.me/79192914557" class="phone-link">+7-919-291-45-57 (Маргарита)</a></p>
                     <p><i class="fas fa-phone"></i> Звонки: +7-921-428-89-21</p>
                     <hr>
-                    <p><i class="fas fa-hands-helping"></i> <strong>Хотите попробовать, но не уверены?</strong> Вы можете стать волонтёром на этом или следующем ретрите — помогать с организацией, знакомиться с практикой в мягкой форме. Напишите Марине.</p>
+                    <p><i class="fas fa-hands-helping"></i> <strong>Хотите сначала попробовать?</strong> Приезжайте волонтёром на этот или следующий ретрит — помогайте с организацией, знакомьтесь с практикой в щадящем режиме. Пишите Марине.</p>
                 </div>
             </div>
             <div class="card-feature" style="background: #fff; padding: 2rem;">
-                <h3><i class="fas fa-pen-alt"></i> Форма предварительной записи</h3>
-                <p style="margin-bottom: 1rem;">Заполните — мы пришлём официальную анкету и подтверждение.</p>
-                <!-- Здесь имитируем форму, так как настоящая форма находится на оригинальном сайте, но для лендинга делаем рабочую заглушку, ведущую на ссылку регистрации -->
+                <h3><i class="fas fa-pen-alt"></i> Предварительная запись</h3>
+                <p style="margin-bottom: 1rem;">Заполните форму — мы свяжемся для подтверждения участия в ретрите для членов CEO 50 Business Club и их гостей.</p>
+                <!-- форма ведёт на официальную страницу регистрации Буддавихары -->
                 <form action="https://www.buddhavihara.ru/retreat/" target="_blank" method="get">
-                    <input type="text" placeholder="Ваше имя" required style="width:100%; padding: 14px; border-radius: 60px; border: 1px solid #e2d2bf; margin-bottom: 1rem; background: #fefcf9;">
+                    <input type="text" placeholder="Ваше имя и фамилия" required style="width:100%; padding: 14px; border-radius: 60px; border: 1px solid #e2d2bf; margin-bottom: 1rem; background: #fefcf9;">
                     <input type="email" placeholder="Email" required style="width:100%; padding: 14px; border-radius: 60px; border: 1px solid #e2d2bf; margin-bottom: 1rem;">
-                    <input type="tel" placeholder="Телефон (WhatsApp)" style="width:100%; padding: 14px; border-radius: 60px; border: 1px solid #e2d2bf; margin-bottom: 1rem;">
+                    <input type="tel" placeholder="Телефон (WhatsApp / Telegram)" style="width:100%; padding: 14px; border-radius: 60px; border: 1px solid #e2d2bf; margin-bottom: 1rem;">
                     <select style="width:100%; padding: 14px; border-radius: 60px; border: 1px solid #e2d2bf; margin-bottom: 1.5rem; background: #fefcf9;">
-                        <option>CEO / основатель</option>
-                        <option>Фрилансер / самозанятый</option>
+                        <option>Участник CEO 50 Business Club</option>
+                        <option>Гость / предприниматель</option>
                         <option>Топ-менеджер</option>
-                        <option>Другая сфера</option>
+                        <option>Интересуюсь волонтёрством</option>
                     </select>
                     <button type="submit" class="btn btn-primary" style="width:100%; justify-content: center;"><i class="fas fa-pray"></i> Отправить заявку</button>
-                    <p class="text-small" style="margin-top: 1rem; text-align: center;">Нажимая, вы перейдёте на официальную страницу регистрации ретрита Буддавихары. Участие подтверждается после согласования.</p>
+                    <p class="text-small" style="margin-top: 1rem; text-align: center;">Нажатие перенаправит вас на официальную страницу регистрации ретрита Буддавихары. Участие подтверждается после согласования с организаторами.</p>
                 </form>
             </div>
         </div>
@@ -516,7 +526,7 @@
     <div class="container" style="text-align: center;">
         <div style="max-width: 700px; margin: 0 auto;">
             <i class="fas fa-quote-left" style="font-size: 2rem; color: #d4b48c;"></i>
-            <p style="font-size: 1.25rem; font-style: italic; margin: 1rem 0;">«Буддавихара — это пространство, где вы можете освободить ум от всего лишнего, чтобы по-настоящему встретиться с собой».</p>
+            <p style="font-size: 1.25rem; font-style: italic; margin: 1rem 0;">«Буддавихара — это место, где вы можете остановиться и, наконец, встретиться с собой без посредников».</p>
             <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 1.5rem;">
                 <a href="https://vk.com/buddhavihara" target="_blank" style="color:#5a4a3a; font-size: 1.6rem;"><i class="fab fa-vk"></i></a>
                 <a href="#" target="_blank" style="color:#5a4a3a; font-size: 1.6rem;"><i class="fab fa-instagram"></i></a>
@@ -529,8 +539,8 @@
 <footer>
     <div class="container">
         <p><i class="fas fa-pagelines"></i> Буддавихара — Обитель Будды · Санкт-Петербург · Тайская традиция Тхеравада</p>
-        <p>Все ретриты проводятся на пожертвования. Для записи на ретрит 28 октября – 2 ноября 2025 заполните форму выше или свяжитесь с организаторами.</p>
-        <p style="margin-top: 1rem;">© 2025 · Приглашение в сообщество випассаны для CEO и фрилансеров</p>
+        <p>Ретрит для CEO 50 Business Club проходит с 28 октября по 2 ноября 2025. Для записи заполните форму или свяжитесь с организаторами.</p>
+        <p style="margin-top: 1rem;">© 2025 · Приглашение в сообщество випассаны для лидеров и предпринимателей</p>
     </div>
 </footer>
 </body>
