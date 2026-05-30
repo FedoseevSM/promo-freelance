@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Тайский ретрит випассана — CEO 50 Business Club</title>
+    <title>Тайский ретрит фричейнинг — CEO 50 Business Club | Семён Федосеев</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <!-- Font Awesome 6 -->
@@ -23,7 +23,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Спокойная буддийская палитра — никаких излишних графических логотипов, только фоновые тона */
         :root {
             --sand-light: #f5efe6;
             --terracotta: #b85c38;
@@ -42,12 +41,10 @@
             padding: 0 24px;
         }
 
-        /* Простой фоновый слой — только цвет, никакого логотипа или узоров */
         body {
             background-color: var(--sand-light);
         }
 
-        /* hero секция с мягким градиентом */
         .hero {
             background: linear-gradient(125deg, #3e2c23 0%, #2b221b 100%);
             color: #fef3e4;
@@ -195,6 +192,61 @@
             .grid-2 { grid-template-columns: 1fr 1fr; gap: 4rem; }
         }
 
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+            margin: 2rem 0 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .benefit-card {
+            background: #fffdf9;
+            border-radius: 28px;
+            padding: 1.75rem 1.5rem;
+            text-align: center;
+            transition: all 0.25s ease;
+            border: 1px solid #f1e4d6;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: #e2cfb8;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--terracotta);
+            margin-bottom: 1.2rem;
+        }
+
+        .benefit-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.65rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #3e2c23;
+        }
+
+        .benefit-card p {
+            font-size: 0.9rem;
+            color: #5a4a3a;
+            line-height: 1.4;
+        }
+
         .card-feature {
             background: white;
             border-radius: 32px;
@@ -224,13 +276,13 @@
         .teacher-avatar {
             width: 140px;
             height: 140px;
-            background: #e5d5bd;
+            background: linear-gradient(145deg, #e8d9c8, #dac9b4);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
-            color: #8b5a2b;
+            font-size: 3.8rem;
+            color: #7c5a3e;
             flex-shrink: 0;
         }
 
@@ -299,11 +351,6 @@
             height: 1px;
             background: linear-gradient(to right, #e9dbc9, transparent);
         }
-        .btn-wa {
-            background: #25D36620;
-            border-color: #25D36650;
-            color: #2c2a24;
-        }
         .club-badge {
             background: #d8c9b5;
             color: #3a2a1f;
@@ -321,51 +368,169 @@
             h1 { font-size: 2.8rem; }
             .section-title { font-size: 2rem; }
         }
+        .countries-badge {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 0.5rem;
+        }
+        .countries-badge span {
+            background: #e7dac8;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.8rem;
+            font-weight: 500;
+            color: #3e2c23;
+        }
+
+        .register-block {
+            text-align: center;
+            background: linear-gradient(135deg, #fffaf2 0%, #fef5ea 100%);
+            border-radius: 48px;
+            padding: 3rem 2rem;
+            margin-top: 1rem;
+            border: 1px solid #ecdbba;
+        }
+        .big-register-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--terracotta);
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 1rem 2.5rem;
+            border-radius: 60px;
+            transition: all 0.25s;
+            box-shadow: 0 8px 20px rgba(184, 92, 56, 0.25);
+            border: none;
+        }
+        .big-register-btn:hover {
+            background: #9e4a2c;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(184, 92, 56, 0.35);
+        }
+        .register-block p {
+            margin-top: 1.2rem;
+            color: #5a4a3a;
+            font-size: 0.9rem;
+        }
+        .inspiration-card {
+            background: #fffaf2;
+            border-radius: 32px;
+            padding: 2rem;
+            margin: 2rem 0 1rem;
+            border-left: 8px solid var(--terracotta);
+            box-shadow: var(--shadow-sm);
+        }
+        .vikrom-quote {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #4a3729;
+            margin-top: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--deep-ochre);
+        }
+        .location-update {
+            background: #f1ebe0;
+            border-radius: 20px;
+            padding: 0.8rem 1.2rem;
+            display: inline-block;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 <body>
 
-<!-- Герой-секция: приглашение для CEO 50 Business Club -->
+<!-- Hero секция -->
 <section class="hero">
     <div class="container hero-content">
         <span class="badge">
-            <i class="fas fa-leaf" style="margin-right: 6px;"></i> Випассана · Тайская традиция 
+            <i class="fas fa-leaf" style="margin-right: 6px;"></i> Фричейнинг · Открытый чейнинг 
             <span class="club-badge"><i class="fas fa-crown"></i> CEO 50 Business Club</span>
         </span>
         <h1>Отключитесь от потока.<br>Восстановите фокус.</h1>
-        <p class="hero-lead">Эксклюзивный ретрит випассана для участников <strong>CEO 50 Business Club</strong> и приглашённых предпринимателей. 6 дней ментальной тишины, ясности и глубокой трансформации.</p>
+        <p class="hero-lead">Эксклюзивный групповой ретрит по методу <strong>фричейнинг (открытый чейнинг)</strong> для участников <strong>CEO 50 Business Club</strong> и приглашённых предпринимателей. 6 дней ментальной тишины, ясности и глубинной трансформации.</p>
         <div class="btn-group">
-            <a href="#form" class="btn btn-primary"><i class="fas fa-praying-hands"></i> Записаться на ретрит</a>
+            <a href="#register" class="btn btn-primary"><i class="fas fa-praying-hands"></i> Записаться на ретрит</a>
             <a href="#about" class="btn btn-outline"><i class="fas fa-feather-alt"></i> Узнать подробнее</a>
         </div>
-        <p class="text-small" style="opacity: 0.7; margin-top: 1rem;"><i class="fas fa-map-marker-alt"></i> Санкт-Петербург, Горелово | 28 октября – 2 ноября 2025</p>
+        <p class="text-small" style="opacity: 0.7; margin-top: 1rem;"><i class="fas fa-map-marker-alt"></i> Сбор группы начинается у Зимнего сада | 28 октября – 2 ноября 2025</p>
     </div>
 </section>
 
-<!-- О ретрите / что получите + упоминание клуба -->
+<!-- О ретрите: преимущества -->
 <section id="about" class="section-light">
     <div class="container">
-        <div class="grid-2">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <span class="badge" style="background: #e6d5b830; color:#5a3f2e; margin-bottom: 0.5rem;">Для лидеров и предпринимателей</span>
+            <h2 class="section-title title-center">Что вы обретёте за 6 дней</h2>
+            <p style="max-width: 620px; margin: 1rem auto 0;">Фричейнинг (открытый чейнинг) — это система ментальной гигиены, которая меняет качество мышления и жизни через работу с цепочками осознавания.</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-brain"></i></div>
+                <h3>Ясность мышления</h3>
+                <p>Научитесь выстраивать чистые цепочки осознавания, отключать внутренний диалог и видеть суть без искажений.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-dharmachakra"></i></div>
+                <h3>Устойчивость к стрессу</h3>
+                <p>Обретёте инструмент открытого чейнинга для мгновенного восстановления в любой бизнес-ситуации.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-fire"></i></div>
+                <h3>Энергия и фокус</h3>
+                <p>Перестанете сливать ресурс на тревогу и ментальный «мусор». Вернёте природную продуктивность.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fas fa-moon"></i></div>
+                <h3>Глубокое восстановление</h3>
+                <p>6 дней полного диджитал-детокса вернут больше ясности, чем месяц обычного отдыха.</p>
+            </div>
+        </div>
+
+        <!-- концептуальное вдохновение Викромом Кромадитом -->
+        <div class="inspiration-card">
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 1rem;">
+                <i class="fas fa-landmark" style="font-size: 2rem; color: var(--terracotta);"></i>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin: 0;">Концептуальная идея ретрита</h3>
+            </div>
+            <p style="font-size: 1.05rem;">Наш подход к фричейнингу (открытому чейнингу) и интеграции осознанности в бизнес-среду вдохновлён наследием <strong>Викрома Кромадита</strong> — тайского предпринимателя, философа и общественного деятеля, который доказал, что внутренний покой и материальный успех не исключают, а усиливают друг друга.</p>
+            <div class="vikrom-quote">
+                <i class="fas fa-quote-left" style="margin-right: 8px; opacity: 0.6;"></i> Кромадит — автор более 15 книг, посвящённых гармоничному лидерству, буддийской психологии и социальной ответственности бизнеса. Он вёл собственную программу на местном телевидении и колонку в нескольких тайских газетах, где делился мудростью для миллионов людей.
+            </div>
+            <p style="margin-top: 1rem;">Корпорации <strong>«Амата»</strong>, основанной Викромом, принадлежит несколько индустриальных парков на территории Таиланда и Вьетнама. В 2007 году журнал <strong>Forbes</strong> назвал его в числе 40 богатейших людей Таиланда, отдав Кромадиту 27-ю строчку. При этом он оставался практикующим буддистом и примером того, как осознанность (открытый чейнинг) может стать фундаментом устойчивого развития.</p>
+            <p style="margin-top: 0.8rem; font-weight: 500;">Мы берём эту философию за основу: <strong>ясный ум → правильные решения → процветание без выгорания</strong>. Групповой ретрит по методу фричейнинг для CEO 50 Business Club — это шаг к такому образу мышления.</p>
+        </div>
+
+        <div class="grid-2" style="margin-top: 2rem;">
             <div>
-                <span class="badge" style="background: #e6d5b830; color:#5a3f2e;">Для лидеров и предпринимателей</span>
-                <h2 class="section-title">Медитация как высший пилотаж</h2>
-                <p style="font-size: 1.1rem; margin: 1.5rem 0 1rem;">CEO 50 Business Club объединяет лидеров, которые стремятся к росту во всех сферах. Этот ретрит — практика випассаны, очищающая ум от информационного шума, возвращающая способность принимать решения из состояния покоя и внутренней опоры.</p>
-                <ul class="info-list">
-                    <li><i class="fas fa-brain"></i> <strong>Ясность мышления</strong> — ум становится острым и незамутнённым.</li>
-                    <li><i class="fas fa-dharmachakra"></i> <strong>Антистресс-система</strong> — навык мгновенного восстановления в любой среде.</li>
-                    <li><i class="fas fa-fire"></i> <strong>Тотальный фокус</strong> — устраняем рассеивание внимания.</li>
-                    <li><i class="fas fa-moon"></i> <strong>Диджитал-детокс</strong> — 6 дней без телефонов и уведомлений.</li>
-                </ul>
+                <p style="font-size: 1.05rem; margin-bottom: 1rem;">CEO 50 Business Club объединяет лидеров, которые стремятся к росту во всех сферах. Этот групповой ретрит — практика фричейнинга (открытого чейнинга), очищающая ум от информационного шума, возвращающая способность принимать решения из состояния покоя и внутренней опоры. Под руководством <strong>Семёна Федосеева</strong> — практика с 10-летним стажем, экс-разработчика и успешного фрилансера.</p>
+                <div class="location-update">
+                    <i class="fas fa-tree"></i> Место проведения: загородная резиденция, Ленинградская область. Сбор группы организован у Зимнего сада (координаты высылаются после регистрации).
+                </div>
             </div>
             <div>
                 <div class="card-feature" style="background: #faf2e6;">
                     <i class="fas fa-users"></i>
                     <h3 style="font-size: 1.6rem; margin: 0.5rem 0;">CEO 50 Business Club Retreat</h3>
-                    <p>Закрытое сообщество предпринимателей, топ-менеджеров и владельцев бизнеса. Мы создаём пространство для глубокой внутренней работы без соревновательности. Количество мест: 30–40 участников клуба и их гостей.</p>
+                    <p>Закрытое сообщество предпринимателей, топ-менеджеров и владельцев бизнеса. Количество мест ограничено: до 40 участников клуба и их гостей.</p>
                     <hr>
                     <i class="fas fa-chalkboard-user"></i>
-                    <h3 style="font-size: 1.2rem; margin-top: 0.5rem;">Учитель — Аджан Чатри</h3>
-                    <p>Монах тайской традиции, психолог, представитель Тайской Сангхи в России. Более 20 лет обучает практикам осознанности, адаптируя их к ритму современного лидера.</p>
+                    <h3 style="font-size: 1.2rem; margin-top: 0.5rem;">Ведущий ретрита — Семён Федосеев</h3>
+                    <p>Практикующий фричейнинг с 10-летним опытом. Прошёл путь от разработчика в московском аэропорту Домодедово до успешного фрилансера и наставника. Убедившись на личном опыте, как ментальное выгорание и хаос в уме мешают строить карьеру, Семён обратился к методу открытого чейнинга.</p>
+                    <div class="countries-badge">
+                        <span><i class="fas fa-globe-asia"></i> Таиланд</span>
+                        <span><i class="fas fa-globe-asia"></i> Малайзия</span>
+                        <span><i class="fas fa-globe-asia"></i> Камбоджа</span>
+                        <span><i class="fas fa-globe-africa"></i> Эфиопия</span>
+                        <span><i class="fas fa-globe"></i> Дубай</span>
+                        <span><i class="fas fa-globe-africa"></i> ЮАР</span>
+                        <span><i class="fas fa-globe-americas"></i> Бразилия</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -377,18 +542,18 @@
     <div class="container">
         <div style="text-align: center; margin-bottom: 2rem;">
             <h2 class="section-title title-center">Дух ретрита — полное присутствие</h2>
-            <p style="max-width: 620px; margin: 1.5rem auto 0;">Молчание, отказ от гаджетов, медитации сидя и при ходьбе. Простые условия для максимальной глубины.</p>
+            <p style="max-width: 620px; margin: 1.5rem auto 0;">Молчание, отказ от гаджетов, практика открытого чейнинга (фричейнинг) сидя и при ходьбе. Простые условия для максимальной глубины.</p>
         </div>
         <div class="grid-2">
             <div>
                 <h3><i class="fas fa-clock"></i> Пример расписания дня</h3>
                 <ul class="info-list" style="margin-top: 1rem;">
-                    <li><i class="fas fa-sun"></i> 05:30 — Пробуждение, декламация строф</li>
-                    <li><i class="fas fa-meditate"></i> 06:00–07:30 — Медитация сидя / ходьба</li>
+                    <li><i class="fas fa-sun"></i> 05:30 — Пробуждение, настройка</li>
+                    <li><i class="fas fa-meditate"></i> 06:00–07:30 — Сессия открытого чейнинга сидя / ходьба</li>
                     <li><i class="fas fa-bowl-food"></i> 08:00 — Приём пищи (вегетарианский завтрак-обед)</li>
-                    <li><i class="fas fa-chalkboard"></i> 10:00 — Лекция / инструкции по випассане</li>
-                    <li><i class="fas fa-person-walking"></i> 12:00–17:00 — Сессии медитации (с перерывами, чай)</li>
-                    <li><i class="fas fa-heart"></i> 18:00 — Медитация метта (любящей доброты)</li>
+                    <li><i class="fas fa-chalkboard"></i> 10:00 — Лекция / инструкции по фричейнингу от Семёна Федосеева</li>
+                    <li><i class="fas fa-person-walking"></i> 12:00–17:00 — Сессии практики (с перерывами, чай)</li>
+                    <li><i class="fas fa-heart"></i> 18:00 — Медитация любящей доброты (метта)</li>
                     <li><i class="fas fa-spa"></i> 20:30 — Завершение, отдых</li>
                 </ul>
                 <p class="text-small" style="margin-top: 1rem;"><i class="fas fa-leaf"></i> Питание 1 раз в день (вегетарианское). Для беременных, диабетиков или при гастрите — гибкий режим.</p>
@@ -397,38 +562,45 @@
                 <h3><i class="fas fa-hand-sparkles"></i> Правила сообщества на ретрите</h3>
                 <div class="rules-grid">
                     <div class="rule-item"><i class="fas fa-comment-slash"></i> Полное благородное молчание</div>
-                    <div class="rule-item"><i class="fas fa-mobile-alt"></i> Сдача телефонов и часов</div>
+                    <div class="rule-item"><i class="fas fa-mobile-alt"></i> Сдача телефонов и носимых устройств</div>
                     <div class="rule-item"><i class="fas fa-skull-crossbones"></i> Без алкоголя, никотина, стимуляторов</div>
                     <div class="rule-item"><i class="fas fa-user-check"></i> Нарушители покидают ретрит</div>
                 </div>
                 <div class="donation-box" style="margin-top: 2rem;">
                     <i class="fas fa-hand-holding-heart" style="font-size: 2rem; color: #b85c38;"></i>
-                    <h4 style="margin: 0.5rem 0">Дана — подношение из сердца</h4>
-                    <p>Буддавихара существует только на добровольные пожертвования. Рекомендованная поддержка на коммунальные расходы — от 1000₽ (можно на месте). Для студентов дана не обязательна. Ваша щедрость сохраняет «Дом Будды».</p>
+                    <h4 style="margin: 0.5rem 0">Философия даны (подношение)</h4>
+                    <p>Проведение группового ретрита возможно на основе добровольных пожертвований. Рекомендованная поддержка на организационные расходы — от 1000₽ (можно внести на месте). Ваша щедрость помогает сохранять традицию открытого чейнинга и проводить ретриты для новых участников.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Учитель -->
+<!-- Рассказ об учителе Семёне Федосееве -->
 <section class="section-light">
     <div class="container">
         <div class="teacher-card">
             <div class="teacher-avatar">
-                <i class="fas fa-user-circle"></i>
+                <i class="fas fa-laptop-code"></i>
             </div>
             <div>
-                <h2 style="font-family: 'Cormorant Garamond'; font-size: 2rem;">Аджан Чатри</h2>
-                <p style="font-style: italic; color: #6b4c3b;">Монах тайской традиции Тхеравада, дипломат, представитель Тайской Сангхи в России</p>
-                <p>«Буддизм — это не религия в догматическом смысле, а система психологической саморегуляции. Випассана помогает лидерам обрести спокойствие ума и видеть вещи такими, какие они есть». Аджан Чатри объединяет мудрость древности с современной психологией, обучая более 20 лет практикующих по всему миру.</p>
-                <p><i class="fas fa-university"></i> Образование: Королевский буддийский университет, дипломатия и миротворчество (Англия, Австралия).</p>
+                <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem;">Семён Федосеев</h2>
+                <p style="font-style: italic; color: #6b4c3b;">Практик фричейнинга (10 лет), экс-разработчик в московском аэропорту Домодедово, успешный фрилансер и наставник</p>
+                <p>Путь Семёна начался в IT: от работы разработчиком в крупной госкорпорации (московский аэропорт Домодедово) до реализации множества проектов на фрилансе. Постоянный поток дедлайнов, многозадачность и ментальный шум привели его к глубокому выгоранию. Решением стал фричейнинг (открытый чейнинг) — древний метод работы с сознанием, который он начал изучать более 10 лет назад.</p>
+                <p>Чтобы получить полное понимание практики, Семён лично <strong>посетил 7 стран</strong>: Таиланд, Малайзия, Камбоджа, Эфиопия, Дубай, ЮАР и Бразилия. Он изучал традиции открытого чейнинга в их аутентичной среде и адаптировал их для современных профессионалов — тех, кто работает головой, живёт в стрессе и хочет вернуть себе ясность.</p>
+                <p>Теперь Семён делится этим методом с участниками <strong>CEO 50 Business Club</strong>: как перестать выгорать, восстановить фокус и принимать решения из состояния внутренней тишины. Фричейнинг — это не религия, а проверенный метод ментальной гигиены для тех, кто хочет работать эффективнее и жить осознаннее.</p>
+                <div class="countries-badge" style="margin-top: 1rem;">
+                    <span><i class="fas fa-check-circle"></i> 7 стран практики</span>
+                    <span><i class="fas fa-briefcase"></i> Разработка в Домодедово</span>
+                    <span><i class="fas fa-rocket"></i> 10+ лет во фрилансе</span>
+                    <span><i class="fas fa-dove"></i> 10 лет фричейнинга</span>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Проживание, вещи, локация -->
+<!-- Проживание, вещи, локация (обновлено место сбора) -->
 <section class="section-sand">
     <div class="container">
         <div class="grid-2">
@@ -452,81 +624,51 @@
             </div>
             <div>
                 <h2 class="section-title">Лесная обитель</h2>
-                <p>Загородный буддийский центр «Буддавихара» расположен в экологичной зоне Горелово (Ленинградская область). Тишина, сосны, атмосфера уединения — идеальное место для глубокого погружения в себя. Адрес и точная схема проезда высылаются после подтверждения заявки.</p>
+                <p>Загородная резиденция расположена в экологичной зоне Ленинградской области (вблизи Санкт-Петербурга). Тишина, сосны, атмосфера уединения — идеальное место для глубокого погружения в практику открытого чейнинга.</p>
                 <div class="donation-box" style="margin-top: 1rem;">
+                    <i class="fas fa-map-pin"></i>
+                    <h4>Сбор группы</h4>
+                    <p><strong>Начало сбора — у Зимнего сада.</strong> Точные координаты и инструкции по прибытию будут высланы после подтверждения заявки.</p>
+                    <hr>
                     <i class="fas fa-ticket-alt"></i>
                     <h4>Как присоединиться к ретриту CEO 50?</h4>
-                    <p>Заполните форму ниже или свяжитесь с куратором клуба. Количество мест ограничено. Также возможен формат волонтёрства — мягкое знакомство с практикой без полного 6-дневного погружения.</p>
-                    <a href="#form" class="btn btn-primary" style="margin-top: 1rem; background: #7e5a41; border: none; color: white;">Заполнить заявку →</a>
+                    <p>Количество мест ограничено (до 40 участников). Для участия необходимо заполнить официальную форму регистрации.</p>
+                    <a href="https://www.buddhavihara.ru/retreat/" target="_blank" class="btn btn-primary" style="margin-top: 1rem; background: #7e5a41; border: none; color: white;"><i class="fas fa-external-link-alt"></i> Заполнить анкету →</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Поддержать центр (пожертвования) -->
-<section class="section-light">
+<!-- Контакты и кнопка регистрации -->
+<section id="register" class="section-light">
     <div class="container">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <i class="fas fa-dove" style="font-size: 2.5rem; color: #b85c38;"></i>
-            <h2 class="section-title title-center" style="margin-top: 1rem;">Поддержите «Буддавихару»</h2>
-            <p>Дом Будды существует исключительно на ваши дары. Даже небольшое подношение помогает оплачивать коммунальные услуги, газ, отопление и проводить ретриты для всех желающих. Пусть ваша щедрость станет частью Дхаммы.</p>
-            <div class="donation-box" style="margin: 2rem 0; text-align: left;">
-                <h4><i class="fas fa-hand-holding-usd"></i> Реквизиты для пожертвования (пожалуйста, сохраните скриншот):</h4>
-                <ul class="info-list" style="margin-top: 1rem;">
-                    <li><i class="fab fa-sberbank"></i> <strong>Сбербанк (МИР):</strong> 2202 2050 3816 6614 (Пхра Чатри Х.)</li>
-                    <li><i class="fab fa-cc-visa"></i> <strong>Тинькофф:</strong> 4377 7237 4428 9186</li>
-                    <li><i class="fas fa-phone-alt"></i> <strong>По номеру телефона:</strong> +7-911-117-15-15</li>
-                </ul>
-                <p class="text-small" style="margin-top: 1rem;">Рекомендованное минимальное пожертвование для покрытия расходов — 1000₽. Для студентов — дана не обязательна. Заранее переведённая сумма — знак серьёзного намерения участвовать в ретрите.</p>
+        <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+            <i class="fas fa-envelope" style="font-size: 2.5rem; color: var(--terracotta); margin-bottom: 1rem;"></i>
+            <h2 class="section-title title-center">Остались вопросы?</h2>
+            <p style="margin: 1rem 0;">Свяжитесь с организаторами напрямую, чтобы уточнить детали или получить помощь с регистрацией.</p>
+            <div style="margin: 1.5rem 0;">
+                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp / Telegram:</strong> <a href="https://wa.me/79214288921" class="phone-link">+7-921-428-89-21 (Марина)</a> или <a href="https://wa.me/79192914557" class="phone-link">+7-919-291-45-57 (Маргарита)</a></p>
+                <p><i class="fas fa-phone"></i> <strong>Звонки:</strong> +7-921-428-89-21</p>
+            </div>
+            <div style="margin-top: 2rem;">
+                <a href="https://www.buddhavihara.ru/retreat/" target="_blank" class="big-register-btn" style="background: var(--terracotta);">
+                    <i class="fas fa-praying-hands"></i> Перейти к форме записи
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <p class="text-small" style="margin-top: 0.8rem;">Заполните анкету — после этого с вами свяжутся для подтверждения места.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Регистрация и контакты -->
-<section id="form" class="section-sand">
-    <div class="container">
-        <div class="grid-2" style="align-items: start;">
-            <div>
-                <h2 class="section-title">Заявка на участие</h2>
-                <p>Станьте частью эксклюзивного ретрита CEO 50 Business Club. После отправки формы с вами свяжутся организаторы, вышлют анкету, подтвердят место и подробную информацию о сборах.</p>
-                <div style="margin-top: 2rem;">
-                    <p><i class="fas fa-envelope"></i> Или свяжитесь напрямую:</p>
-                    <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp / Telegram:</strong> <a href="https://wa.me/79214288921" class="phone-link">+7-921-428-89-21 (Марина)</a> или <a href="https://wa.me/79192914557" class="phone-link">+7-919-291-45-57 (Маргарита)</a></p>
-                    <p><i class="fas fa-phone"></i> Звонки: +7-921-428-89-21</p>
-                    <hr>
-                    <p><i class="fas fa-hands-helping"></i> <strong>Хотите сначала попробовать?</strong> Приезжайте волонтёром на этот или следующий ретрит — помогайте с организацией, знакомьтесь с практикой в щадящем режиме. Пишите Марине.</p>
-                </div>
-            </div>
-            <div class="card-feature" style="background: #fff; padding: 2rem;">
-                <h3><i class="fas fa-pen-alt"></i> Предварительная запись</h3>
-                <p style="margin-bottom: 1rem;">Заполните форму — мы свяжемся для подтверждения участия в ретрите для членов CEO 50 Business Club и их гостей.</p>
-                <!-- форма ведёт на официальную страницу регистрации Буддавихары -->
-                <form action="https://www.buddhavihara.ru/retreat/" target="_blank" method="get">
-                    <input type="text" placeholder="Ваше имя и фамилия" required style="width:100%; padding: 14px; border-radius: 60px; border: 1px solid #e2d2bf; margin-bottom: 1rem; background: #fefcf9;">
-                    <input type="email" placeholder="Email" required style="width:100%; padding: 14px; border-radius: 60px; border: 1px solid #e2d2bf; margin-bottom: 1rem;">
-                    <input type="tel" placeholder="Телефон (WhatsApp / Telegram)" style="width:100%; padding: 14px; border-radius: 60px; border: 1px solid #e2d2bf; margin-bottom: 1rem;">
-                    <select style="width:100%; padding: 14px; border-radius: 60px; border: 1px solid #e2d2bf; margin-bottom: 1.5rem; background: #fefcf9;">
-                        <option>Участник CEO 50 Business Club</option>
-                        <option>Гость / предприниматель</option>
-                        <option>Топ-менеджер</option>
-                        <option>Интересуюсь волонтёрством</option>
-                    </select>
-                    <button type="submit" class="btn btn-primary" style="width:100%; justify-content: center;"><i class="fas fa-pray"></i> Отправить заявку</button>
-                    <p class="text-small" style="margin-top: 1rem; text-align: center;">Нажатие перенаправит вас на официальную страницу регистрации ретрита Буддавихары. Участие подтверждается после согласования с организаторами.</p>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Цитата и соцсети -->
-<section class="section-light" style="padding: 2rem 0;">
+<!-- Цитата -->
+<section class="section-sand" style="padding: 2rem 0;">
     <div class="container" style="text-align: center;">
         <div style="max-width: 700px; margin: 0 auto;">
             <i class="fas fa-quote-left" style="font-size: 2rem; color: #d4b48c;"></i>
-            <p style="font-size: 1.25rem; font-style: italic; margin: 1rem 0;">«Буддавихара — это место, где вы можете остановиться и, наконец, встретиться с собой без посредников».</p>
+            <p style="font-size: 1.25rem; font-style: italic; margin: 1rem 0;">«Тишина — это не отсутствие звуков, а место, где рождаются самые ясные решения. Фричейнинг дал мне больше, чем любые курсы по тайм-менеджменту».</p>
+            <p style="font-weight: 500;">— Семён Федосеев, практик открытого чейнинга, экс-разработчик в Домодедово</p>
             <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 1.5rem;">
                 <a href="https://vk.com/buddhavihara" target="_blank" style="color:#5a4a3a; font-size: 1.6rem;"><i class="fab fa-vk"></i></a>
                 <a href="#" target="_blank" style="color:#5a4a3a; font-size: 1.6rem;"><i class="fab fa-instagram"></i></a>
@@ -538,9 +680,9 @@
 
 <footer>
     <div class="container">
-        <p><i class="fas fa-pagelines"></i> Буддавихара — Обитель Будды · Санкт-Петербург · Тайская традиция Тхеравада</p>
-        <p>Ретрит для CEO 50 Business Club проходит с 28 октября по 2 ноября 2025. Для записи заполните форму или свяжитесь с организаторами.</p>
-        <p style="margin-top: 1rem;">© 2025 · Приглашение в сообщество випассаны для лидеров и предпринимателей</p>
+        <p><i class="fas fa-pagelines"></i> Центр групповой практики фричейнинг · Проведение ретритов для предпринимателей</p>
+        <p>Групповой ретрит по методу открытого чейнинга (фричейнинг) для CEO 50 Business Club с Семёном Федосеевым проходит с 28 октября по 2 ноября 2025. Сбор группы — у Зимнего сада.</p>
+        <p style="margin-top: 1rem;">© 2025 · Приглашение в сообщество открытого чейнинга для лидеров и предпринимателей</p>
     </div>
 </footer>
 </body>
