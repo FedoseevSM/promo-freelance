@@ -486,6 +486,56 @@
             margin: 1rem 0;
             border-radius: 16px;
         }
+        /* Стили для новой секции онлайн-преподавания */
+        .online-teacher-section {
+            background: linear-gradient(115deg, #fff9ef 0%, #fff3e6 100%);
+            border-top: 1px solid #f0e2d2;
+            border-bottom: 1px solid #f0e2d2;
+        }
+        .stepik-card {
+            background: #ffffff;
+            border-radius: 40px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 1px solid #ecdbba;
+            transition: transform 0.2s;
+        }
+        .stepik-card:hover {
+            transform: translateY(-5px);
+        }
+        .stepik-icon {
+            font-size: 3rem;
+            color: #215f6c;
+            background: #e2f0f2;
+            width: 80px;
+            height: 80px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 60px;
+            margin-bottom: 1.5rem;
+        }
+        .btn-stepik {
+            background: #215f6c;
+            border: none;
+            color: white;
+            margin-top: 1rem;
+        }
+        .btn-stepik:hover {
+            background: #0f4a55;
+            transform: translateY(-2px);
+        }
+        .free-badge {
+            background: #e7b88c;
+            color: #2b2a1e;
+            font-weight: 700;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -500,7 +550,6 @@
         <h1>Отключитесь от потока.<br>Восстановите фокус.</h1>
         <p class="hero-lead">Эксклюзивный групповой ретрит по методу <strong>фричейнинг (открытый чейнинг)</strong> для участников <strong>CEO 50 Business Club</strong> и приглашённых предпринимателей. 6 дней ментальной тишины, ясности и глубинной трансформации.</p>
         <div class="btn-group">
-            <!-- Обновлённая ссылка на форму во всех кнопках -->
             <a href="https://23z27d6r5yy.typeform.com/to/tSJZFp5e" target="_blank" class="btn btn-primary"><i class="fas fa-praying-hands"></i> Записаться на ретрит</a>
             <a href="#about" class="btn btn-outline"><i class="fas fa-feather-alt"></i> Узнать подробнее</a>
         </div>
@@ -542,7 +591,6 @@
             </div>
         </div>
 
-        <!-- концептуальное вдохновение Викромом Кромадитом -->
         <div class="inspiration-card">
             <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 1rem;">
                 <i class="fas fa-landmark" style="font-size: 2rem; color: var(--terracotta);"></i>
@@ -581,6 +629,48 @@
                         <span><i class="fas fa-globe-africa"></i> ЮАР</span>
                         <span><i class="fas fa-globe-americas"></i> Бразилия</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- НОВАЯ СЕКЦИЯ: ОНЛАЙН-ПРЕПОДАВАТЕЛЬ И БЕСПЛАТНЫЕ КУРСЫ НА STEPIK (только кнопка, без списка) -->
+<section class="online-teacher-section">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <span class="badge" style="background: #e2cbb530; color:#5a3f2e;"><i class="fas fa-chalkboard"></i> Образовательная платформа</span>
+            <h2 class="section-title title-center">Семён Федосеев — онлайн-преподаватель</h2>
+            <p style="max-width: 680px; margin: 1rem auto 0;">Не ждите офлайн-ретрита, чтобы начать менять качество мышления. Уже сейчас вы можете изучать методику фричейнинга бесплатно и в удобном темпе.</p>
+        </div>
+        <div class="grid-2" style="align-items: center;">
+            <div class="stepik-card">
+                <div class="stepik-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="free-badge">
+                    <i class="fas fa-gem"></i> Бесплатные онлайн-курсы
+                </div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.9rem;">Stepik — авторская программа</h3>
+                <p>Семён Федосеев разработал уникальные курсы по открытому чейнингу (фричейнинг) на крупнейшей образовательной платформе Stepik. Теория, практические упражнения, пошаговое освоение ментальной гигиены.</p>
+                <!-- Кнопка открывает ссылку в отдельном окне (target="_blank") и ведёт в образовательный профиль -->
+                <a href="https://stepik.org/users/468787925/teach" target="_blank" rel="noopener" class="btn btn-primary btn-stepik" style="background: #215f6c; border: none;">
+                    <i class="fab fa-stepik"></i> Перейти в профиль преподавателя → 
+                </a>
+                <p class="text-small" style="margin-top: 1rem;">Все курсы доступны бесплатно, регистрация на Stepik бесплатна</p>
+            </div>
+            <div>
+                <div class="card-feature" style="background: white;">
+                    <i class="fas fa-laptop-code" style="font-size: 2rem;"></i>
+                    <h3>Онлайн-формат для всех желающих</h3>
+                    <p>Семён Федосеев активно развивает направление онлайн-образования. На платформе Stepik вы найдёте структурированные уроки, записанные лекции и практические задания по фричейнингу. Это идеальная возможность начать знакомство с методом до участия в офлайн-ретрите или углубить свои знания после групповой практики.</p>
+                    <div style="margin: 1.5rem 0;">
+                        <i class="fas fa-users-viewfinder"></i> <strong>Более 2000 учеников</strong> уже присоединились к бесплатным курсам
+                    </div>
+                    <div class="location-update" style="background: #eef2f0;">
+                        <i class="fas fa-mobile-alt"></i> Учитесь из любой точки мира — практики открытого чейнинга в записи и домашние задания.
+                    </div>
+                    <a href="https://stepik.org/users/468787925/teach" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 1.5rem; background: var(--terracotta);"><i class="fas fa-play-circle"></i> Начать обучение бесплатно</a>
                 </div>
             </div>
         </div>
@@ -675,7 +765,6 @@
                     <i class="fas fa-ticket-alt"></i>
                     <h4>Как присоединиться к ретриту CEO 50?</h4>
                     <p>Количество мест ограничено (до 40 участников). Для участия необходимо заполнить официальную форму регистрации.</p>
-                    <!-- Обновлённая ссылка на форму -->
                     <a href="https://23z27d6r5yy.typeform.com/to/tSJZFp5e" target="_blank" class="btn btn-primary" style="margin-top: 1rem; background: #7e5a41; border: none; color: white;"><i class="fas fa-external-link-alt"></i> Заполнить анкету →</a>
                 </div>
             </div>
@@ -683,7 +772,7 @@
     </div>
 </section>
 
-<!-- Контакты и кнопка регистрации (оставлен только номер +79998664742, ссылка обновлена) -->
+<!-- Контакты и кнопка регистрации -->
 <section id="register" class="section-light">
     <div class="container">
         <div style="max-width: 700px; margin: 0 auto; text-align: center;">
@@ -693,7 +782,6 @@
             <div class="contact-phone">
                 <i class="fas fa-phone-alt"></i> <strong>+7 999 866-47-42</strong> (звонки, Telegram)
             </div>
-            <!-- QR-код для быстрого перехода к форме -->
             <div class="qr-block">
                 <i class="fas fa-qrcode" style="font-size: 1.5rem; color: var(--terracotta);"></i>
                 <p style="margin: 0.5rem 0;">Отсканируйте, чтобы перейти к регистрации</p>
@@ -703,7 +791,6 @@
                 <p class="text-small" style="margin-top: 0.5rem;">Или нажмите на кнопку</p>
             </div>
             <div style="margin-top: 1rem;">
-                <!-- Обновлённая ссылка на форму -->
                 <a href="https://23z27d6r5yy.typeform.com/to/tSJZFp5e" target="_blank" class="big-register-btn" style="background: var(--terracotta);">
                     <i class="fas fa-praying-hands"></i> Перейти к форме записи
                     <i class="fas fa-arrow-right"></i>
