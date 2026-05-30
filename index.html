@@ -336,10 +336,6 @@
         .text-small {
             font-size: 0.85rem;
         }
-        .phone-link {
-            color: var(--terracotta);
-            font-weight: 500;
-        }
 
         hr {
             margin: 2rem 0;
@@ -466,6 +462,17 @@
         .social-category a:hover {
             color: var(--terracotta);
         }
+        .contact-line {
+            margin: 0.5rem 0;
+        }
+        .location-badge {
+            background: #e7dac8;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin-left: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -483,7 +490,9 @@
             <a href="#register" class="btn btn-primary"><i class="fas fa-praying-hands"></i> Записаться на ретрит</a>
             <a href="#about" class="btn btn-outline"><i class="fas fa-feather-alt"></i> Узнать подробнее</a>
         </div>
-        <p class="text-small" style="opacity: 0.7; margin-top: 1rem;"><i class="fas fa-map-marker-alt"></i> Сбор группы начинается у Зимнего сада | 28 октября – 2 ноября 2025</p>
+        <p class="text-small" style="opacity: 0.7; margin-top: 1rem;">
+            <i class="fas fa-map-marker-alt"></i> Сбор у кафе Оранжерея Таврического сада, Санкт-Петербург | 28 октября – 2 ноября 2025
+        </p>
     </div>
 </section>
 
@@ -537,7 +546,7 @@
             <div>
                 <p style="font-size: 1.05rem; margin-bottom: 1rem;">CEO 50 Business Club объединяет лидеров, которые стремятся к росту во всех сферах. Этот групповой ретрит — практика фричейнинга (открытого чейнинга), очищающая ум от информационного шума, возвращающая способность принимать решения из состояния покоя и внутренней опоры. Под руководством <strong>Семёна Федосеева</strong> — практика с 10-летним стажем, экс-разработчика и успешного фрилансера.</p>
                 <div class="location-update">
-                    <i class="fas fa-tree"></i> Место проведения: загородная резиденция, Ленинградская область. Сбор группы организован у Зимнего сада (координаты высылаются после регистрации).
+                    <i class="fas fa-tree"></i> Проведение ретрита — в Таврическом саду, Санкт-Петербург. Живописная атмосфера парка, вековые деревья и тишина создают идеальные условия для глубокой практики.
                 </div>
             </div>
             <div>
@@ -577,13 +586,12 @@
                 <ul class="info-list" style="margin-top: 1rem;">
                     <li><i class="fas fa-sun"></i> 05:30 — Пробуждение, настройка</li>
                     <li><i class="fas fa-meditate"></i> 06:00–07:30 — Сессия открытого чейнинга сидя / ходьба</li>
-                    <li><i class="fas fa-bowl-food"></i> 08:00 — Приём пищи (вегетарианский завтрак-обед)</li>
+                    <li><i class="fas fa-bowl-food"></i> 08:00 — Приём пищи</li>
                     <li><i class="fas fa-chalkboard"></i> 10:00 — Лекция / инструкции по фричейнингу от Семёна Федосеева</li>
                     <li><i class="fas fa-person-walking"></i> 12:00–17:00 — Сессии практики (с перерывами, чай)</li>
                     <li><i class="fas fa-heart"></i> 18:00 — Медитация любящей доброты (метта)</li>
                     <li><i class="fas fa-spa"></i> 20:30 — Завершение, отдых</li>
                 </ul>
-                <p class="text-small" style="margin-top: 1rem;"><i class="fas fa-leaf"></i> Питание 1 раз в день (вегетарианское). Для беременных, диабетиков или при гастрите — гибкий режим.</p>
             </div>
             <div>
                 <h3><i class="fas fa-hand-sparkles"></i> Правила сообщества на ретрите</h3>
@@ -627,35 +635,30 @@
     </div>
 </section>
 
-<!-- Проживание, вещи, локация -->
+<!-- Проживание, вещи, локация (обновлено: Таврический сад) -->
 <section class="section-sand">
     <div class="container">
         <div class="grid-2">
             <div>
-                <h2 class="section-title">Аскетичный комфорт</h2>
-                <ul class="info-list" style="margin-top: 1.5rem;">
-                    <li><i class="fas fa-bed"></i> <strong>Общие комнаты</strong> (раздельные для мужчин и женщин) — матрасы на полу.</li>
-                    <li><i class="fas fa-thermometer-half"></i> Простота, близость к природе — важная часть практики.</li>
-                    <li><i class="fas fa-tshirt"></i> <strong>Дресс-код:</strong> светлые тона (белый, серый, бежевый, коричневый), свободный крой, закрытые плечи и колени.</li>
-                    <li><i class="fas fa-carrot"></i> <strong>Питание:</strong> вегетарианское, приветствуются продукты для общего стола (рис, овощи, фрукты).</li>
-                </ul>
-                <div style="background: white; border-radius: 24px; padding: 1.5rem; margin-top: 1.5rem;">
-                    <i class="fas fa-suitcase"></i> <strong>Что необходимо взять</strong>
+                <h2 class="section-title">Необходимые вещи</h2>
+                <div style="background: white; border-radius: 24px; padding: 1.5rem; margin-top: 0.5rem;">
+                    <i class="fas fa-suitcase"></i> <strong>Что взять с собой</strong>
                     <ul style="margin-top: 0.8rem; list-style: none;">
-                        <li>✓ Спальный мешок или одеяло</li>
-                        <li>✓ Удобная немаркая одежда (2–3 комплекта)</li>
-                        <li>✓ Полотенце, гигиенические принадлежности, кружка</li>
+                        <li>✓ Удобная светлая одежда (несколько комплектов)</li>
+                        <li>✓ Коврик для сидения (по желанию)</li>
+                        <li>✓ Личные вещи, полотенце</li>
+                        <li>✓ Кружка, термос для чая</li>
                         <li>✓ Продукты для общего стола (список пришлём после регистрации)</li>
                     </ul>
                 </div>
             </div>
             <div>
-                <h2 class="section-title">Лесная обитель</h2>
-                <p>Загородная резиденция расположена в экологичной зоне Ленинградской области (вблизи Санкт-Петербурга). Тишина, сосны, атмосфера уединения — идеальное место для глубокого погружения в практику открытого чейнинга.</p>
+                <h2 class="section-title">О месте проведения</h2>
+                <p><strong>Таврический сад</strong> — один из самых живописных и тихих парков в центре Санкт-Петербурга. Вековые деревья, пруды, уединённые аллеи создают атмосферу, располагающую к глубокой внутренней работе и практике открытого чейнинга.</p>
                 <div class="donation-box" style="margin-top: 1rem;">
                     <i class="fas fa-map-pin"></i>
                     <h4>Сбор группы</h4>
-                    <p><strong>Начало сбора — у Зимнего сада.</strong> Точные координаты и инструкции по прибытию будут высланы после подтверждения заявки.</p>
+                    <p><strong>Сбор у кафе Оранжерея Таврического сада.</strong> Точные координаты и инструкции будут высланы после подтверждения заявки.</p>
                     <hr>
                     <i class="fas fa-ticket-alt"></i>
                     <h4>Как присоединиться к ретриту CEO 50?</h4>
@@ -675,8 +678,9 @@
             <h2 class="section-title title-center">Остались вопросы?</h2>
             <p style="margin: 1rem 0;">Свяжитесь с организаторами напрямую, чтобы уточнить детали или получить помощь с регистрацией.</p>
             <div style="margin: 1.5rem 0;">
-                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp / Telegram:</strong> <a href="https://wa.me/79214288921" class="phone-link">+7-921-428-89-21 (Марина)</a> или <a href="https://wa.me/79192914557" class="phone-link">+7-919-291-45-57 (Маргарита)</a></p>
-                <p><i class="fas fa-phone"></i> <strong>Звонки:</strong> +7-921-428-89-21</p>
+                <div class="contact-line"><strong>Есть номер телефона и Telegram:</strong> <a href="https://t.me/+79998664742" style="color: var(--terracotta);">+7 999 866-47-42</a></div>
+                <div class="contact-line"><strong>WhatsApp / Telegram:</strong> <a href="https://wa.me/79214288921" style="color: var(--terracotta);">+7-921-428-89-21 (Марина)</a> или <a href="https://wa.me/79192914557" style="color: var(--terracotta);">+7-919-291-45-57 (Маргарита)</a></div>
+                <div class="contact-line"><strong>Звонки:</strong> +7-921-428-89-21</div>
             </div>
             <div style="margin-top: 2rem;">
                 <a href="https://www.buddhavihara.ru/retreat/" target="_blank" class="big-register-btn" style="background: var(--terracotta);">
@@ -689,7 +693,7 @@
     </div>
 </section>
 
-<!-- НОВЫЙ БЛОК: Все ссылки на профили Семёна Федосеева -->
+<!-- БЛОК СО ССЫЛКАМИ -->
 <section class="section-sand">
     <div class="container">
         <div style="text-align: center; margin-bottom: 2rem;">
@@ -698,27 +702,27 @@
         </div>
         <div class="social-links-block">
             <div class="social-category">
-                <h4><i class="fas fa-id-card"></i> Контакты и услуги</h4>
+                <h4>Контакты и услуги</h4>
                 <a href="https://tenchat.ru/freechising" target="_blank" rel="noopener">TenChat — freechising</a>
                 <a href="https://freechising.ru" target="_blank" rel="noopener">Конструктор freechising.ru</a>
             </div>
             <div class="social-category">
-                <h4><i class="fas fa-video"></i> ВИДЕО</h4>
+                <h4>ВИДЕО</h4>
                 <a href="https://youtube.com/@freelancerpotipako" target="_blank" rel="noopener">YouTube-канал</a>
                 <a href="https://kinescope.io/d2Vtt24Tk8aVNPvCUsvuDy" target="_blank" rel="noopener">Kinescope — лекции и практики</a>
             </div>
             <div class="social-category">
-                <h4><i class="fab fa-telegram"></i> ЧАТ</h4>
+                <h4>ЧАТ</h4>
                 <a href="https://t.me/+79998664742" target="_blank" rel="noopener">Telegram-канал</a>
                 <a href="https://instagram.com/hipackme" target="_blank" rel="noopener">Instagram — hipackme</a>
             </div>
             <div class="social-category">
-                <h4><i class="fas fa-blog"></i> БЛОГ</h4>
+                <h4>БЛОГ</h4>
                 <a href="https://fedoseevsm.github.io" target="_blank" rel="noopener">GitHub Pages — блог</a>
                 <a href="https://set.ki/GehkTBw" target="_blank" rel="noopener">Сетка — публикации</a>
             </div>
             <div class="social-category">
-                <h4><i class="fas fa-building"></i> АГЕНТСТВО</h4>
+                <h4>АГЕНТСТВО</h4>
                 <a href="https://gui.camp" target="_blank" rel="noopener">gui.camp</a>
                 <a href="https://golfui.ru" target="_blank" rel="noopener">golfui.ru</a>
             </div>
@@ -734,11 +738,6 @@
             <i class="fas fa-quote-left" style="font-size: 2rem; color: #d4b48c;"></i>
             <p style="font-size: 1.25rem; font-style: italic; margin: 1rem 0;">«Тишина — это не отсутствие звуков, а место, где рождаются самые ясные решения. Фричейнинг дал мне больше, чем любые курсы по тайм-менеджменту».</p>
             <p style="font-weight: 500;">— Семён Федосеев, практик открытого чейнинга, экс-разработчик в Домодедово</p>
-            <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 1.5rem;">
-                <a href="https://vk.com/buddhavihara" target="_blank" style="color:#5a4a3a; font-size: 1.6rem;"><i class="fab fa-vk"></i></a>
-                <a href="https://instagram.com/hipackme" target="_blank" style="color:#5a4a3a; font-size: 1.6rem;"><i class="fab fa-instagram"></i></a>
-                <a href="https://t.me/+79998664742" target="_blank" style="color:#5a4a3a; font-size: 1.6rem;"><i class="fab fa-telegram"></i></a>
-            </div>
         </div>
     </div>
 </section>
@@ -746,7 +745,7 @@
 <footer>
     <div class="container">
         <p><i class="fas fa-pagelines"></i> Центр групповой практики фричейнинг · Проведение ретритов для предпринимателей</p>
-        <p>Групповой ретрит по методу открытого чейнинга (фричейнинг) для CEO 50 Business Club с Семёном Федосеевым проходит с 28 октября по 2 ноября 2025. Сбор группы — у Зимнего сада.</p>
+        <p>Групповой ретрит по методу открытого чейнинга (фричейнинг) для CEO 50 Business Club с Семёном Федосеевым.<br>Сбор у кафе Оранжерея Таврического сада, Санкт-Петербург. Проведение в Таврическом саду. 28 октября – 2 ноября 2025.</p>
         <p style="margin-top: 1rem;">© 2025 · Приглашение в сообщество открытого чейнинга для лидеров и предпринимателей</p>
     </div>
 </footer>
