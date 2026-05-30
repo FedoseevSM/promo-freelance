@@ -470,6 +470,22 @@
             font-weight: 600;
             margin: 1rem 0;
         }
+        .qr-block {
+            text-align: center;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 32px;
+            max-width: 300px;
+            box-shadow: var(--shadow-sm);
+        }
+        .qr-block img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin: 1rem 0;
+            border-radius: 16px;
+        }
     </style>
 </head>
 <body>
@@ -484,7 +500,8 @@
         <h1>Отключитесь от потока.<br>Восстановите фокус.</h1>
         <p class="hero-lead">Эксклюзивный групповой ретрит по методу <strong>фричейнинг (открытый чейнинг)</strong> для участников <strong>CEO 50 Business Club</strong> и приглашённых предпринимателей. 6 дней ментальной тишины, ясности и глубинной трансформации.</p>
         <div class="btn-group">
-            <a href="#register" class="btn btn-primary"><i class="fas fa-praying-hands"></i> Записаться на ретрит</a>
+            <!-- Обновлённая ссылка на форму во всех кнопках -->
+            <a href="https://23z27d6r5yy.typeform.com/to/tSJZFp5e" target="_blank" class="btn btn-primary"><i class="fas fa-praying-hands"></i> Записаться на ретрит</a>
             <a href="#about" class="btn btn-outline"><i class="fas fa-feather-alt"></i> Узнать подробнее</a>
         </div>
         <p class="text-small" style="opacity: 0.7; margin-top: 1rem;">
@@ -660,14 +677,15 @@
                     <i class="fas fa-ticket-alt"></i>
                     <h4>Как присоединиться к ретриту CEO 50?</h4>
                     <p>Количество мест ограничено (до 40 участников). Для участия необходимо заполнить официальную форму регистрации.</p>
-                    <a href="https://www.buddhavihara.ru/retreat/" target="_blank" class="btn btn-primary" style="margin-top: 1rem; background: #7e5a41; border: none; color: white;"><i class="fas fa-external-link-alt"></i> Заполнить анкету →</a>
+                    <!-- Обновлённая ссылка на форму -->
+                    <a href="https://23z27d6r5yy.typeform.com/to/tSJZFp5e" target="_blank" class="btn btn-primary" style="margin-top: 1rem; background: #7e5a41; border: none; color: white;"><i class="fas fa-external-link-alt"></i> Заполнить анкету →</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Контакты и кнопка регистрации (оставлен только номер +79998664742) -->
+<!-- Контакты и кнопка регистрации (оставлен только номер +79998664742, ссылка обновлена) -->
 <section id="register" class="section-light">
     <div class="container">
         <div style="max-width: 700px; margin: 0 auto; text-align: center;">
@@ -677,8 +695,18 @@
             <div class="contact-phone">
                 <i class="fas fa-phone-alt"></i> <strong>+7 999 866-47-42</strong> (звонки, Telegram, WhatsApp)
             </div>
-            <div style="margin-top: 2rem;">
-                <a href="https://www.buddhavihara.ru/retreat/" target="_blank" class="big-register-btn" style="background: var(--terracotta);">
+            <!-- QR-код для быстрого перехода к форме -->
+            <div class="qr-block">
+                <i class="fas fa-qrcode" style="font-size: 1.5rem; color: var(--terracotta);"></i>
+                <p style="margin: 0.5rem 0;">Отсканируйте, чтобы перейти к регистрации</p>
+                <img src="https://raw.githubusercontent.com/FedoseevSM/promo-freelance/refs/heads/main/IMG_5449.png" 
+                     alt="QR-код для регистрации на ретрит"
+                     onerror="this.onerror=null; this.alt='QR-код временно недоступен, используйте кнопку ниже'; this.style.opacity='0.7';">
+                <p class="text-small" style="margin-top: 0.5rem;">Или нажмите на кнопку</p>
+            </div>
+            <div style="margin-top: 1rem;">
+                <!-- Обновлённая ссылка на форму -->
+                <a href="https://23z27d6r5yy.typeform.com/to/tSJZFp5e" target="_blank" class="big-register-btn" style="background: var(--terracotta);">
                     <i class="fas fa-praying-hands"></i> Перейти к форме записи
                     <i class="fas fa-arrow-right"></i>
                 </a>
