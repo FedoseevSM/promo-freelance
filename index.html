@@ -931,6 +931,98 @@
         window.addEventListener('scroll', updateScrollProgress);
         window.addEventListener('resize', updateScrollProgress);
         updateScrollProgress();
+        
+        // Вспомогательная функция: создать анимированный смайлик
+        function createEmoji(x, y, emoji, delayMs = 0) {
+            setTimeout(() => {
+                const el = document.createElement('div');
+                el.className = 'emoji-burst';
+                el.textContent = emoji;
+                const dx = (Math.random() - 0.5) * 90 + 20;
+                const dyStart = -20 - Math.random() * 40;
+                const dxEnd = dx + (Math.random() - 0.5) * 70;
+                const dyEnd = -80 - Math.random() * 70;
+                const rot = (Math.random() - 0.5) * 60;
+                const rotEnd = rot + (Math.random() - 0.5) * 40;
+                el.style.setProperty('--dx', `${dx}px`);
+                el.style.setProperty('--dy', `${dyStart}px`);
+                el.style.setProperty('--dx-end', `${dxEnd}px`);
+                el.style.setProperty('--dy-end', `${dyEnd}px`);
+                el.style.setProperty('--rot', `${rot}deg`);
+                el.style.setProperty('--rot-end', `${rotEnd}deg`);
+                el.style.left = `${x - 20}px`;
+                el.style.top = `${y - 25}px`;
+                el.style.fontSize = `${1.8 + Math.random() * 1.4}rem`;
+                document.body.appendChild(el);
+                setTimeout(() => { if(el.remove) el.remove(); }, 1000);
+            }, delayMs);
+        }
+        
+        function createSparkle(x, y) {
+            const spark = document.createElement('div');
+            spark.className = 'sparkle-particle';
+            spark.style.left = `${x + (Math.random() - 0.5) * 30}px`;
+            spark.style.top = `${y + (Math.random() - 0.5) * 30}px`;
+            document.body.appendChild(spark);
+            setTimeout(() => { if(spark.remove) spark.remove(); }, 600);
+        }
+
+        // Уникальные анимации под каждую карточку
+        const cards = document.querySelectorAll('.benefit-card');
+        cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                const rect = card.getBoundingClientRect();
+                const clickX = e.clientX;
+                const clickY = e.clientY;
+                const type = card.getAttribute('data-animation-type');
+                
+                // Эффект нажатия
+                card.style.transform = 'scale(0.97)';
+                setTimeout(() => { card.style.transform = ''; }, 120);
+
+                // 1. Ясность мышления — озарение, кристаллы, лампочки
+                if (type === 'clarity') {
+                    const emojis = ['🧠✨', '💡', '🔮', '✨', '💎', '🧩', '🌟', '🔍'];
+                    for (let i = 0; i < 10; i++) {
+                        const randEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+                        createEmoji(clickX, clickY, randEmoji, i * 35);
+                    }
+                    for (let i = 0; i < 12; i++) createSparkle(clickX, clickY);
+                }
+                // 2. Устойчивость к стрессу — щиты, спокойствие, защита
+                else if (type === 'stress') {
+                    const emojis = ['🛡️', '🧘', '💪', '🌊', '🌀', '☯️', '⚖️', '🌸', '🕊️'];
+                    for (let i = 0; i < 10; i++) {
+                        const randEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+                        createEmoji(clickX, clickY, randEmoji, i * 40);
+                    }
+                    for (let i = 0; i < 8; i++) createSparkle(clickX, clickY);
+                }
+                // 3. Энергия и фокус — молнии, огонь, ракеты
+                else if (type === 'energy') {
+                    const emojis = ['🔥', '⚡', '🎯', '🚀', '💥', '⚡', '💪', '🔋', '⭐'];
+                    for (let i = 0; i < 12; i++) {
+                        const randEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+                        createEmoji(clickX, clickY, randEmoji, i * 30);
+                    }
+                    for (let i = 0; i < 15; i++) createSparkle(clickX, clickY);
+                }
+                // 4. Глубокое восстановление — луна, капли, сон, листья
+                else if (type === 'recovery') {
+                    const emojis = ['🌙', '💤', '🌿', '💧', '🕯️', '🌸', '🌊', '🍃', '⭐'];
+                    for (let i = 0; i < 10; i++) {
+                        const randEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+                        createEmoji(clickX, clickY, randEmoji, i * 45);
+                    }
+                    for (let i = 0; i < 10; i++) createSparkle(clickX, clickY);
+                }
+                // fallback
+                else {
+                    createEmoji(clickX, clickY, '✨', 0);
+                    createEmoji(clickX, clickY, '🌟', 80);
+                }
+            });
+        });
     })();
 </script>
 </body>
